@@ -1,9 +1,9 @@
 require('capybara/rspec')
-require('./app')
-Capybara.app Sinatra::Application
-set(:show_exceptions, false)
+require('./app.rb')
+Capybara.app = Sinatra::Application
+set(:show_execptions, false)
 
-describe() do
+describe('path for answer', {:type => :feature}) do
   it('will get the text to the index page') do
     visit('/')
     fill_in('user-word', :with => 'Hail')
