@@ -10,9 +10,9 @@ _I made a short page for assessment day to allow the user to choose a word and d
 
 Specifications:
 
-* _  _
-* _  _
-* _  _
+* _Make sample strings into the same case and remove all white space_
+* _Compare two string to see if the same characters are present for confirmation of anagram _
+* _Make certain that sample string contains a vowels_
 * _  _
 * _  _
 * _  _

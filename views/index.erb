@@ -1,9 +1,15 @@
-<form action="/ana_form" method="get">
-  <div class="form-group">
-    <label for="user-word">Enter word here:</label>
-    <input id="user-word" name="user-word" type="text">
+<div class="center">
+  <div class="display">
+    <%= @variation %>
   </div>
-  <button type="submit">Click</button>
-</form>
+  <form action="/ana_form" method="get">
+    <div class="form-group">
+      <label for="user-word">Enter word here:</label>
+      <input id="user-word" name="user-word" type="text">
+    </div>
+    <button type="submit">Click</button>
+  </form>
 
-<h2> <%= @result %></h2>
+  <h2> <%= @result %></h2>
+
+</div>

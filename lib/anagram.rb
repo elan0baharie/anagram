@@ -1,25 +1,33 @@
 class String
-  define_method(:anagram_mthd) do |test_word|
+  define_method(:format_mthd) do
+    self.downcase().delete(" ")
+  end
+
+  define_method(:anagram_detect) do |anagram_test|
     vowels = ["a", "e", "i", "o", "u"]
-    reference_array = []
-    prep_word = self.downcase()
-    test_word.downcase!()
-    test_word_array = test_word.split(//)
+    temp_hold = []
+    length_of_test = anagram_test.length()
+    user_string = self.downcase.delete(" ")
+    test_string = anagram_test.downcase.delete(" ")
 
-    possibilities = test_word_array.permutation()
+    temp_hold.push(test_string.split(""))
+    temp_hold.unshift(user_string.split(""))
+    puts temp_hold
 
-    possibilities.each() do |variation|
-      wordlikes = variation.join()
-      reference_array.push(wordlikes)
-    end
-
-    if (reference_array.include?(prep_word))
-
-      return "These words are anagrams."
-    else
-      return false
-    end
+    temp_hold[0].sort!
+    temp_hold[1].sort!
+    temp_hold[0] == temp_hold[1]
 
 
   end
+
+  #   puts test_word_array
+    # test_word_array = test_word.split(//)
+
+    # possibilities = test_word_array
+    #
+    # possibilities.each() do |variation|
+    #   wordlikes = variation.join()
+    #   reference_array.push(wordlikes)
+    # end
 end
