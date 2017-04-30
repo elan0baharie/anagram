@@ -1,4 +1,5 @@
 class String
+  #Test specs to demonstrate necessary functions
   define_method(:format_mthd) do
     self.downcase!().delete!(" ")
   end
@@ -60,6 +61,7 @@ class String
     presence_test.include?(true)
   end
 
+#Main method to enact project requirements
   define_method(:main) do |test_string|
     ana_hash = Hash.new
     vowel = ["a", "e", "i", "o", "u", "y"]
@@ -67,11 +69,13 @@ class String
     presence_test = []
     antigram_presence = []
 
-    self + " "
-    test_string + " "
+    #Had to add white space to samples in order to run delete method from the beggining
+    self + " ,"
+    test_string + " ,"
 
-    ana_hash.store("user format", self.downcase().delete(" "))
-    ana_hash.store("test format", test_string.downcase().delete(" "))
+    #Strings are saved in same case with all spaces removed
+    ana_hash.store("user format", self.downcase().delete(" !,.?'@%$&:*;"))
+    ana_hash.store("test format", test_string.downcase().delete(" !,.?'@%$&:*;"))
 
     temp_user = ana_hash.fetch("user format")
     temp_test = ana_hash.fetch("test format")
@@ -94,6 +98,7 @@ class String
 
     ana_hash.store("user vowels", presence_user)
 
+    #Test for presence of vowels
     temp_test_chars.each() do |char|
       presence_test.push(vowel.include?(char))
     end
@@ -103,9 +108,18 @@ class String
     user_vowel_array = ana_hash.fetch("user vowels")
     test_vowel_array = ana_hash.fetch("test vowels")
 
+    #Test for presence of shared characters
     temp_user_chars.each() do |char|
       antigram_presence.push(temp_test_chars.include?(char))
     end
+
+    total_shared_chars = Hash.new 0
+
+    antigram_presence.each do |bool|
+      total_shared_chars[bool] += 1
+    end
+
+    print total_shared_chars[true]
 
     if user_vowel_array.include?(true) == false || test_vowel_array.include?(true) == false
       "You need to input actual words!"
@@ -116,7 +130,7 @@ class String
     elsif antigram_presence.include?(true) == false
       "These words have no letter matches and are antigrams."
     else
-      "Unaccounted"
+      "These words are not antigram or anagrams because they share only #{ total_shared_chars[true] } characters."
     end
   end
 end

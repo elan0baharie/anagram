@@ -1,6 +1,6 @@
 # _Anagram Solver_
 
-#### _Choose your pizza!, 04.21.17_
+#### _What Are Antigrams/Anagrams, 04.21.17_
 
 #### By _**E. Baharie**_
 
@@ -10,17 +10,17 @@ _I made a short page for assessment day to allow the user to choose a word and d
 
 Specifications:
 
-* _Make sample strings into the same case and remove all white space_
+* _Make sample strings into the same case and remove all white space and punctuation_
 * _Compare two string to see if the same characters are present for confirmation of anagram _
+* _Sort characters in alphabetical order to determine if they are the same_
 * _Make certain that sample string contains a vowels_
-* _  _
-* _  _
-* _  _
+* _See how many characters are shared to determine whether two samples are antigrams_
 
 ## Setup/Installation Requirements
 
 * _Clone page from Github_
-* _Open in preferred web browser_
+* _Open in command line interface and navigate to directory_
+* _Run page with ruby app.rb_
 
 ## Known Bugs
 

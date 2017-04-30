@@ -62,4 +62,20 @@ describe('String#anagram_mthd') do
   it("will determine if no letters match in the two strings") do
     expect(("breath").main("wound")).to(eq("These words have no letter matches and are antigrams."))
   end
+
+  it("will test a new entry") do
+    expect(("crate").main("trace")).to(eq("These words are anagrams."))
+  end
+
+  it("will test a new entry") do
+    expect(("the eyes").main("they see")).to(eq("These words are anagrams."))
+  end
+
+  it("will test a new entry") do
+    expect(("t,he eye!!s").main("th$ey se..e")).to(eq("These words are anagrams."))
+  end
+
+  it("will test a new entry") do
+    expect(("heart").main("shame")).to(eq("These words are not antigram or anagrams because they share only 3 characters."))
+  end
 end
