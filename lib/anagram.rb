@@ -65,6 +65,7 @@ class String
     vowel = ["a", "e", "i", "o", "u", "y"]
     presence_user = []
     presence_test = []
+    antigram_presence = []
 
     self + " "
     test_string + " "
@@ -102,14 +103,20 @@ class String
     user_vowel_array = ana_hash.fetch("user vowels")
     test_vowel_array = ana_hash.fetch("test vowels")
 
+    temp_user_chars.each() do |char|
+      antigram_presence.push(temp_test_chars.include?(char))
+    end
+
     if user_vowel_array.include?(true) == false || test_vowel_array.include?(true) == false
       "You need to input actual words!"
     elsif (ana_hash.fetch("user ana") == ana_hash.fetch("test ana")) && (ana_hash.fetch("palin test") == test_phrase)
       "These words are palindromes."
     elsif ana_hash.fetch("user ana") == ana_hash.fetch("test ana")
       "These words are anagrams."
-    else
+    elsif antigram_presence.include?(true) == false
       "These words have no letter matches and are antigrams."
+    else
+      "Unaccounted"
     end
   end
 end

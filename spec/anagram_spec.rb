@@ -58,4 +58,8 @@ describe('String#anagram_mthd') do
   it("will determine if either of the two strings lack vowels") do
     expect(("breath").main("trhb")).to(eq("You need to input actual words!"))
   end
+
+  it("will determine if no letters match in the two strings") do
+    expect(("breath").main("wound")).to(eq("These words have no letter matches and are antigrams."))
+  end
 end
