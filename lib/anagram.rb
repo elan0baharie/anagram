@@ -109,7 +109,7 @@ class String
     elsif ana_hash.fetch("user ana") == ana_hash.fetch("test ana")
       "These words are anagrams."
     else
-      "These words are palindromes."
+      "These words have no letter matches and are antigrams."
     end
   end
 end

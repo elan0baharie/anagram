@@ -50,4 +50,12 @@ describe('String#anagram_mthd') do
   it("will determine if the two string are palindromes when taken together") do
     expect(("bat").main("tab")).to(eq("These words are palindromes."))
   end
+
+  it("will determine if either of the two strings lack vowels") do
+    expect(("brth").main("trhb")).to(eq("You need to input actual words!"))
+  end
+
+  it("will determine if either of the two strings lack vowels") do
+    expect(("breath").main("trhb")).to(eq("You need to input actual words!"))
+  end
 end
