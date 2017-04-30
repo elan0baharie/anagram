@@ -39,7 +39,11 @@ describe('String#anagram_mthd') do
     expect(("castle").antigram("share")).to(eq(true))
   end
 
-  it("will determine if either string shares any characters") do
+  it("will determine if the two string are anagrams") do
     expect(("parse").main("spare")).to(eq("These words are anagrams."))
+  end
+
+  it("will determine if the two string are anagrams regardless of case") do
+    expect(("Parse").main("Spare")).to(eq("These words are anagrams."))
   end
 end
