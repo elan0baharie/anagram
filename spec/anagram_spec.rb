@@ -46,4 +46,8 @@ describe('String#anagram_mthd') do
   it("will determine if the two string are anagrams regardless of case") do
     expect(("Parse").main("Spare")).to(eq("These words are anagrams."))
   end
+
+  it("will determine if the two string are palindromes when taken together") do
+    expect(("bat").main("tab")).to(eq("These words are palindromes."))
+  end
 end

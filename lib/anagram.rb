@@ -104,6 +104,8 @@ class String
 
     if user_vowel_array.include?(true) == false || test_vowel_array.include?(true) == false
       "You need to input actual words!"
+    elsif (ana_hash.fetch("user ana") == ana_hash.fetch("test ana")) && (ana_hash.fetch("palin test") == test_phrase)
+      "These words are palindromes."
     elsif ana_hash.fetch("user ana") == ana_hash.fetch("test ana")
       "These words are anagrams."
     else
