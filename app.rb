@@ -8,6 +8,8 @@ get('/') do
 end
 
 get('/ana_form')do
-  @result = params.fetch('user-word')
+  @user = params.fetch('user-word')
+  @test = params.fetch('test-word')
+  @result = @user.main(@test)
   erb(:index)
 end

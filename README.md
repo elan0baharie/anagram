@@ -28,7 +28,7 @@ _Not yet!_
 
 ## Support and contact details
 
-_Elan Baharie email: 0elan1@gmail.com page found at _
+_Elan Baharie email: 0elan1@gmail.com page found at https://github.com/elan0baharie/anagram.git_
 
 ## Technologies Used
 

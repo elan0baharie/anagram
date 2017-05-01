@@ -1,15 +1,21 @@
 <div class="center">
-  <div class="display">
-    <%= @variation %>
-  </div>
-  <form action="/ana_form" method="get">
+  <form class="well form-horizontal" action="/ana_form" method="get">
     <div class="form-group">
-      <label for="user-word">Enter word here:</label>
-      <input id="user-word" name="user-word" type="text">
+      <div class="col-sm-10">
+        <label for="user-word">Enter word here:</label>
+        <input class="form-control" id="user-word" name="user-word" type="text" placeholder="Word or Words to test for anagram or antigram status">
+      <div>
+      </div>
+    <br>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <label for="test-word">Enter word here:</label>
+        <input class="form-control" id="test-word" name="test-word" type="text">
+      </div>
     </div>
-    <button type="submit">Click</button>
+    <button class="btn btn-info" type="submit">Click</button>
+    <h2> <%= @result %></h2>
   </form>
 
-  <h2> <%= @result %></h2>
 
 </div>

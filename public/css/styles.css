@@ -22,13 +22,33 @@ body {
 .center {
   width: 80%;
   height: 1000px;
-  background-color: brown;
+  align-items: center;
+
 }
 
-.display {
-  height: 500px;
-  width: 500px;
-  background-color: #dfbf9f;
-  border: 4px solid #804000;
+.well {
+  background-color: #bbd4fc;
+  border: 5px solid #2480cc;
   border-radius: 10px;
+}
+
+label {
+  border-width: 4px 3px 0px 0px;
+  border-color: #93c4ec;
+  background-color: #2480cc;
+  border-style: solid;
+  color: #9bc8ed;
+  font-size: 18px;
+  font-family: serif;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+input {
+  height: 20px;
+
+  font-family: monospace;
+  background-color: #c2def4;
+  color: #2688d9;
+  font-size: 18px;
 }
